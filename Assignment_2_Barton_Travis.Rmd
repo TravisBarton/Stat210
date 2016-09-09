@@ -1,0 +1,53 @@
+---
+title: "Assignment 2"
+author: "Travis Barton"
+date: "9/9/16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="")
+```
+```{r Generals}
+
+```
+
+Here we are looking at a sample of flowers, Poinsettias to be exact. Lets take a look at that we have.
+
+
+```{r, echo=FALSE}
+poi <- read.csv("~/Desktop/Stats 210/Assignemnt 2 (active and due monday 9:11:16)/Poinsettias.csv")
+
+```
+
+From a sample of `r nrow(poi) ` Poinsettias, we have the follwoing color distribution:
+
+```{r, echo = FALSE}
+(superman <- table(poi$color))
+```
+  As you can see, the majority of the flowers are red. The number of white and pink flowers are similar, which make me think that, maybe, they have the same true regression slope.
+
+  
+Lets take a closer look.
+```{r, echo=FALSE}
+n <- c(55:100)
+barplot(superman, col = rainbow(n))
+
+```
+
+If we take a look at the summary  of the table:  
+We have:
+
+`r (superman[1])` Prink Flowers   
+
+`r superman[2]` Red flowersand    
+
+and `r superman[3]` White flowers
+
+
+
+
+
+
+
+
